@@ -25,7 +25,7 @@ echo "[+] Url (Ex. indosecid.blogspot.com): "; $url= trim(fgets(STDIN));
 echo "[+] Port (Harus Angka): "; $Port= trim(fgets(STDIN));
 $datas = 'remoteAddress='.$url.'&portNumber='.$Port;
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://ports.yougetsignal.com/check-port.php');
+curl_setopt($ch, CURLOPT_URL, 'https://ports.yougetsignal.com/tools/open-ports/');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
 $aq= curl_exec($ch);
